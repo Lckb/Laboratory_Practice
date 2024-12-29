@@ -1,5 +1,5 @@
  #include<stdint.h>
-
+// UPDATES TEST TEXT CHANGES
 void GPIO_Init(void){
     *(uint32_t*)(0x40023800UL + 0x30UL) |= 0x02;
     *(uint32_t*)(0x40020400UL + 0x00UL) |= 0x4000;
