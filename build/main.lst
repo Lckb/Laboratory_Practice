@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s 			page 1
+ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccUHJQfN.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -38,12 +38,12 @@ ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s 			page 1
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
-   5:Core/Src/main.c ****     *(uint32_t*)(0x40023800UL + 0x30UL) |= 0x02; // Включение тактирования п�
+   5:Core/Src/main.c ****     *(uint32_t*)(0x40023800UL + 0x30UL) |= 0x06; // Включение тактирования п�
   35              		.loc 1 5 5 view .LVU1
   36 0000 174A     		ldr	r2, .L6
   37 0002 D2F83038 		ldr	r3, [r2, #2096]
   38              		.loc 1 5 41 is_stmt 0 view .LVU2
-  39 0006 43F00203 		orr	r3, r3, #2
+  39 0006 43F00603 		orr	r3, r3, #6
   40 000a C2F83038 		str	r3, [r2, #2096]
    6:Core/Src/main.c ****     *(uint32_t*)(0x40020400UL + 0x00UL) |= 0x4000; // Настройка работы 7-го пин
   41              		.loc 1 6 5 is_stmt 1 view .LVU3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s 			page 1
   48              		.loc 1 8 5 view .LVU6
   49 001c D3F80824 		ldr	r2, [r3, #1032]
   50              		.loc 1 8 41 is_stmt 0 view .LVU7
-ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s 			page 2
+ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccUHJQfN.s 			page 2
 
 
   51 0020 42F48042 		orr	r2, r2, #16384
@@ -75,7 +75,7 @@ ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s 			page 1
   60              	.L5:
   11:Core/Src/main.c ****     
   12:Core/Src/main.c ****     while(1){
-  13:Core/Src/main.c ****         if((*(uint32_t*)(0x40020400UL + 0x10UL) & 0x80UL) != 0)
+  13:Core/Src/main.c ****         if((*(uint32_t*)(0x40020800UL + 0x10UL) & 0x2000UL) != 0)
   14:Core/Src/main.c ****         {
   15:Core/Src/main.c ****             *(uint32_t*)(0x40020400UL + 0x18UL) |= 0x80; // bit set
   61              		.loc 1 15 13 is_stmt 1 view .LVU11
@@ -85,17 +85,17 @@ ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s 			page 1
   65 003c 43F08003 		orr	r3, r3, #128
   66 0040 C2F81834 		str	r3, [r2, #1048]
   67              	.L2:
-  12:Core/Src/main.c ****         if((*(uint32_t*)(0x40020400UL + 0x10UL) & 0x80UL) != 0)
+  12:Core/Src/main.c ****         if((*(uint32_t*)(0x40020800UL + 0x10UL) & 0x2000UL) != 0)
   68              		.loc 1 12 5 is_stmt 1 view .LVU13
   13:Core/Src/main.c ****         {
   69              		.loc 1 13 9 view .LVU14
   13:Core/Src/main.c ****         {
   70              		.loc 1 13 13 is_stmt 0 view .LVU15
   71 0044 074B     		ldr	r3, .L6+4
-  72 0046 D3F81034 		ldr	r3, [r3, #1040]
+  72 0046 D3F81038 		ldr	r3, [r3, #2064]
   13:Core/Src/main.c ****         {
   73              		.loc 1 13 11 view .LVU16
-  74 004a 13F0800F 		tst	r3, #128
+  74 004a 13F4005F 		tst	r3, #8192
   75 004e F2D1     		bne	.L5
   16:Core/Src/main.c ****         }
   17:Core/Src/main.c ****         else{
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s 			page 1
   92              		.section	.bss.test,"aw",%nobits
   93              		.align	2
   96              	test:
-ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s 			page 3
+ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccUHJQfN.s 			page 3
 
 
   97 0000 00000000 		.space	4
@@ -126,15 +126,15 @@ ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s 			page 1
   99              	.Letext0:
  100              		.file 2 "C:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1-win32-x64/xpack-arm-none-eabi-gcc-13.2.1-1.1/
  101              		.file 3 "C:/Tools/xpack-arm-none-eabi-gcc-13.2.1-1.1-win32-x64/xpack-arm-none-eabi-gcc-13.2.1-1.1/
-ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s 			page 4
+ARM GAS  C:\Users\ebann\AppData\Local\Temp\ccUHJQfN.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s:21     .text.main:00000000 $t
-C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s:27     .text.main:00000000 main
-C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s:86     .text.main:00000060 $d
-C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s:96     .bss.test:00000000 test
-C:\Users\ebann\AppData\Local\Temp\ccQOVjUf.s:93     .bss.test:00000000 $d
+C:\Users\ebann\AppData\Local\Temp\ccUHJQfN.s:21     .text.main:00000000 $t
+C:\Users\ebann\AppData\Local\Temp\ccUHJQfN.s:27     .text.main:00000000 main
+C:\Users\ebann\AppData\Local\Temp\ccUHJQfN.s:86     .text.main:00000060 $d
+C:\Users\ebann\AppData\Local\Temp\ccUHJQfN.s:96     .bss.test:00000000 test
+C:\Users\ebann\AppData\Local\Temp\ccUHJQfN.s:93     .bss.test:00000000 $d
 
 NO UNDEFINED SYMBOLS
